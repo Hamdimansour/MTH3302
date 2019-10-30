@@ -36,6 +36,8 @@ end
 
 function GMMemfit(y::Vector{<:Real} ; initialValue::Vector{<:Real}=Float64[], maxiter::Int=1000, tol::Real=2*eps())
     
+    n = length(y)
+
     if isempty(initialValue)
         
         ind = (1:n) .< n/2
